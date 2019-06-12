@@ -1,0 +1,38 @@
+<plugin name='postgresql-extensions' version='3.3.0' grailsVersion='2.0 &gt; *'>
+  <author>Iván López</author>
+  <authorEmail>lopez.ivan@gmail.com</authorEmail>
+  <title>Grails Postgresql Extensions Plugin</title>
+  <description>This plugin provides hibernate user types to support for Postgresql Native Types like Array, HStore, JSON,... as well as new criterias to query this native types
+</description>
+  <documentation>https://github.com/kaleidos/grails-postgresql-extensions/blob/master/README.md</documentation>
+  <type>PostgresqlExtensionsGrailsPlugin</type>
+  <resources />
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://grails.org/plugins' url='http://grails.org/plugins' />
+  </repositories>
+  <dependencies>
+    <test>
+      <dependency group='org.spockframework' name='spock-grails-support' version='0.7-groovy-2.0' />
+    </test>
+    <compile>
+      <dependency group='com.google.code.gson' name='gson' version='2.2.4' />
+    </compile>
+    <runtime>
+      <dependency group='org.postgresql' name='postgresql' version='9.2-1004-jdbc4' />
+    </runtime>
+    <build>
+      <dependency group='org.apache.httpcomponents' name='httpclient' version='4.3.2' />
+      <dependency group='org.apache.httpcomponents' name='httpcore' version='4.3.2' />
+      <dependency group='org.apache.httpcomponents' name='httpmime' version='4.3.3' />
+    </build>
+  </dependencies>
+  <plugins>
+    <test>
+      <plugin group='org.grails.plugins' name='spock' version='0.7' />
+    </test>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
